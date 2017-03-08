@@ -2,7 +2,7 @@ import gym
 from gym import wrappers
 env = gym.make('CartPole-v0')
 env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')
- i_episode in range(20):
+while i_episode in range(20):
     observation = env.reset()
     for t in range(100):
         env.render()
