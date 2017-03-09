@@ -1,8 +1,8 @@
 import gym
-env = gym.make('LunarLanderContinuous-v2')
+env = gym.make('LunarLander-v2')
 env.reset()
-for _ in range(100):  # testing changes to number of epochs per episode
+for i in range(1000):
     env.render()
-    env.step(env.action_space.sample())  # take a random action
+    env.step(env.action_space.sample())
 
 
