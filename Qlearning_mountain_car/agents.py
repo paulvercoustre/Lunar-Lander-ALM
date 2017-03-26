@@ -57,14 +57,14 @@ class QlearningAgent(object):
                                                    range(self.bins + 1),
                                                    range(self.bins + 1)):
 
-            self.s[i, j, k, l, m, n, o, p] = np.array([-20 + i * 40 / self.bins,
-                                                       -20 + j * 40 / self.bins,
-                                                       -20 + k * 40 / self.bins,
-                                                       -20 + l * 40 / self.bins,
-                                                       -20 + m * 40 / self.bins,
-                                                       -20 + n * 40 / self.bins,
-                                                       -20 + o * 40 / self.bins,
-                                                       -20 + p * 40 / self.bins])
+            self.s[i, j, k, l, m, n, o, p] = np.array([-4 + i * 8 / self.bins,
+                                                       -4 + j * 8 / self.bins,
+                                                       -4 + k * 8 / self.bins,
+                                                       -4 + l * 8 / self.bins,
+                                                       -4 + m * 8 / self.bins,
+                                                       -4 + n * 8 / self.bins,
+                                                       -4 + o * 8 / self.bins,
+                                                       -4 + p * 8 / self.bins])
 
         self.weight = np.ones((self.action_space, (self.bins + 1) **
                                self.state_space)) / ((self.bins + 1) ** self.state_space)  # set equal weights initially
@@ -123,6 +123,7 @@ class QlearningAgent(object):
         self.next_phi_array = self.dict_to_array(self.next_phi_dict, self.bins)
         self.next_Q = np.dot(self.weight, self.next_phi_array)
 
-        self.weight[self.action, :] += self.alpha * (reward + self.gamma *
-                                                         max(self.next_Q) - self.Q[self.action]) * self.phi_array
+        self.weight[self.action, :] += self.alpha * (reward + self.gamma * max(self.next_Q) - self.Q[self.action]) * \
+                                       self.phi_array
+
         # self.current_state = next_state

@@ -27,13 +27,15 @@ class Experiment(object):
             new_observation = self.env.reset()
             done = False
             t = 0
+            total_reward = 0
 
             while not done:
-                self.env.render()
+                # self.env.render()
                 action = self.agent.act(new_observation, testmode=test)
                 observation = new_observation
                 new_observation, reward, done, info = self.env.step(action)
                 print(reward)
+                total_reward += reward
                 t += 1
 
                 if not test:
@@ -41,6 +43,7 @@ class Experiment(object):
 
                 if done:
                     print("Episode finished after {} timesteps".format(t + 1))
+                    print("Global reward is {}".format(total_reward))
 
             print("Episode done")
 
