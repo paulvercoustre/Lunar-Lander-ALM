@@ -9,6 +9,7 @@ class Experiment(object):
         self.env = env
         self.agent = agent
         self.nb_episodes = nb_episodes
+        self.epsilon = 0.5  # exploration/exploitation ratio
 
     def run(self, test=False):
 
@@ -29,12 +30,15 @@ class Experiment(object):
             t = 0
             total_reward = 0
 
+            if self.epsilon > 0.1:  # epsilon decay
+                self.epsilon *= 0.99
+
             while not done:
-                # self.env.render()
-                action = self.agent.act(new_observation, testmode=test)
+                self.env.render()
+                action = self.agent.act(new_observation, self.epsilon, testmode=test)
                 observation = new_observation
                 new_observation, reward, done, info = self.env.step(action)
-                print(reward)
+                # print(reward)
                 total_reward += reward
                 t += 1
 
@@ -45,7 +49,7 @@ class Experiment(object):
                     print("Episode finished after {} timesteps".format(t + 1))
                     print("Global reward is {}".format(total_reward))
 
-            print("Episode done")
+            print("Episode {} done".format(i_episode))
 
 
 

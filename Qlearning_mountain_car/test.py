@@ -14,15 +14,18 @@ print(env.observation_space.low)
 
 for i_episode in range(5):
     observation = env.reset()
-    for t in range(100):
-        #env.render()
+    done = False
+    t = 0
+    while not done:
+        env.render()
 
         action = env.action_space.sample()
         observation, reward, done, info = env.step(action)
         print(observation)
+        print(reward)
+        t += 1
 
         if done:
             print("Episode finished after {} timesteps".format(t+1))
-            break
 
 
