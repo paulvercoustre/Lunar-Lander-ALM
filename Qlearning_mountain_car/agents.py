@@ -13,7 +13,7 @@ class RandomAgent(object):
 
         np.random.seed(seed)
 
-    def act(self, new_observation, testmode=False):
+    def act(self, new_observation, epsilon, testmode=False):
 
         return np.random.randint(0, self.action_space-1)
 
@@ -46,7 +46,7 @@ class QlearningAgent(object):
 
         self.action = 0      # action taken by the agent
 
-        self.bins = 2  # granularity of discretisation of state space except legs
+        self.bins = 1  # granularity of discretisation of state space except legs
         self.bins_legs = 1
 
         self.s = {}

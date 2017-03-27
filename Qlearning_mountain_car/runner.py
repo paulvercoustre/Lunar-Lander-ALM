@@ -11,7 +11,7 @@ RandAgent = RandomAgent(env.observation_space.shape[0], env.action_space.n, seed
 
 QAgent = QlearningAgent(env.observation_space.shape[0], env.action_space.n, seed=seed)
 
-nb_episodes = 500
+nb_episodes = 1000
 
 # instantiate the setup
 Trial = Experiment(env, QAgent, nb_episodes)
