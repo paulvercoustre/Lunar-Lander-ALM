@@ -22,8 +22,7 @@ solved if one gets an average reward of 200 over 100 consecutive tries.
 We will start using a Q-learning algorithm and move on to a shallow neural network (DQN).
 Random agent results
 
-![image of reward for random agent]
-(https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Random_Agent.png)
+![image of reward for random agent](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Random_Agent.png)
 q-learning
 mountain car
 dql
