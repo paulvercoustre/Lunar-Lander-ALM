@@ -23,6 +23,9 @@ We will start using a Q-learning algorithm and move on to a shallow neural netwo
 Random agent results
 
 ![image of reward for random agent](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Random_Agent.png)
+
+![image of reward kernel 1bin](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Qlearning_Agent_Kernel_1bin.png)
+
 q-learning
 mountain car
 dql
