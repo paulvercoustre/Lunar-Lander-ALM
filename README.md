@@ -20,15 +20,7 @@ points. Landing outside the pad is possible and fuel is infinite. LunarLander - 
 solved if one gets an average reward of 200 over 100 consecutive tries.
 ### Algorithmic Approach
 We will start using a Q-learning algorithm and move on to a shallow neural network (DQN).
-Random agent results
 
-![image of reward for random agent](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Random_Agent.png)
-
-![image of reward kernel 1bin](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/Qlearning_Agent_Kernel_1bin.png)
-
-q-learning
-mountain car
-dql
 ### Additional Information
 Since we’re 3 people we may add additional obstacles to make the project harder such as:
 - random wind
