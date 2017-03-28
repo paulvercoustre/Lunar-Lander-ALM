@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3483d702-9cef-499d-85e1-287e778ec90a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/Qlearning_3bins_Gamma099_2k_episode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/dqn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_5bins_2k_episodes_99gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_9bins_2k_ep_99gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins3_1000ep_99gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins3_20kepisode.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins3_2k_ep_99gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins3_2kep_95gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins3_2kep_9gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins5_1000episodes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/qlearning_bins7_2k_ep_99gamma.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Final Report.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/qlearning_bins.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/Preliminary Report.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Qlearning_mountain_car/runner.py" afterPath="$PROJECT_DIR$/Qlearning_mountain_car/runner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Qlearning_mountain_car/setup.py" afterPath="$PROJECT_DIR$/Qlearning_mountain_car/setup.py" />
-    </list>
+    <list default="true" id="3483d702-9cef-499d-85e1-287e778ec90a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
