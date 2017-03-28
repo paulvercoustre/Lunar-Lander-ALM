@@ -22,7 +22,11 @@ using 3 bins so we expermineted with 3 different gammas, 0.90, 0.95 and 0.99 and
 
 ![gamma0.99, 3 bin, 20k](https://github.com/paulvercoustre/Lunar-Lander-ALM/blob/master/img/qlearning_bins3_20kepisode.png)
 
-The result was a mean reward of 75.
+- Mean reward: 66.70
+- Median reward: 16.92
+- Standard deviation of rewards: 138.48
+- Max total reward: 272.51
+- Min total reward: -507.18
 
 **3 bins**
 
