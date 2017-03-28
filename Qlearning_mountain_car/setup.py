@@ -61,7 +61,7 @@ class Experiment(object):
                     print("Episode {} finished after {} timesteps with "
                           "total reward {}".format(i_episode, t + 1, total_reward))
 
-            if i_episode % 50 == 0:
+            if i_episode % 10 == 0:
                 self.mean_graph[i_episode] = np.mean(total_reward)
 
             self.reward_history[i_episode] = total_reward
