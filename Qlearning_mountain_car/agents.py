@@ -7,7 +7,7 @@ class RandomAgent(object):
     """Implements an agent that takes random actions
     independently of the current state"""
 
-    def __init__(self, state_space, action_space, seed=1):
+    def __init__(self, state_space, action_space, seed=2):
         self.state_space = state_space    # dimensionality of the state space
         self.action_space = action_space  # dimensionality of the action space
 
@@ -32,8 +32,8 @@ class QlearningAgent(object):
 
         np.random.seed(seed)
 
-        self.alpha = 0.2
-        self.gamma = 0.9
+        self.alpha = 0.1
+        self.gamma = 0.99
         # self.epsilon = 0.1  # exploration/exploitation ratio
 
         self.Q = np.zeros(self.action_space)  # the Q values
@@ -46,7 +46,7 @@ class QlearningAgent(object):
 
         self.action = 0      # action taken by the agent
 
-        self.bins = 1  # granularity of discretisation of state space except legs
+        self.bins = 2  # granularity of discretisation of state space except legs
         self.bins_legs = 1
 
         self.s = {}
@@ -59,12 +59,12 @@ class QlearningAgent(object):
                                                    range(self.bins_legs + 1),
                                                    range(self.bins_legs + 1)):
 
-            self.s[i, j, k, l, m, n, o, p] = np.array([-2 + i * 4 / self.bins,
-                                                       -2 + j * 4 / self.bins,
-                                                       -2 + k * 4 / self.bins,
-                                                       -2 + l * 4 / self.bins,
-                                                       -2 + m * 4 / self.bins,
-                                                       -2 + n * 4 / self.bins,
+            self.s[i, j, k, l, m, n, o, p] = np.array([-1 + i * 2 / self.bins,
+                                                       -1 + j * 2 / self.bins,
+                                                       -1 + k * 2 / self.bins,
+                                                       -1 + l * 2 / self.bins,
+                                                       -1 + m * 2 / self.bins,
+                                                       -1 + n * 2 / self.bins,
                                                        -0.5 + o * 1 / self.bins_legs,
                                                        -0.5 + p * 1 / self.bins_legs])
 
@@ -120,7 +120,7 @@ class QlearningAgent(object):
 
         rand = np.random.uniform()
         if rand < epsilon:
-            self.action = np.random.randint(0, self.action_space-1)  # hardcoded value !
+            self.action = np.random.randint(0, self.action_space - 1)  # hardcoded value !
         else:
             # greedy case. Take action with the maximal Q-value
             self.Q = np.dot(self.weight, self.phi_array)
